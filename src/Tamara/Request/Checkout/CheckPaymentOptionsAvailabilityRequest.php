@@ -16,7 +16,7 @@ class CheckPaymentOptionsAvailabilityRequest
         $this->paymentOptionsAvailability = $paymentOptionsAvailability;
     }
 
-    public function getPaymentOptionAvailability()
+    public function getPaymentOptionAvailability() : PaymentOptionsAvailability
     {
         return $this->paymentOptionsAvailability;
     }

@@ -4,6 +4,8 @@ declare (strict_types=1);
 
 namespace Tamara\Model\Checkout;
 
+use Tamara\Model\Money;
+
 class PaymentOptionsAvailability
 {
 
@@ -17,13 +19,13 @@ class PaymentOptionsAvailability
     private $phoneNumber;
     private $isVip;
 
-    public function setIsVip($isVip)
+    public function setIsVip($isVip) : PaymentOptionsAvailability
     {
         $this->isVip = $isVip;
         return $this;
     }
 
-    public function toArray()
+    public function toArray() : array
     {
         return [
             self::COUNTRY => $this->getCountry(),
@@ -38,7 +40,7 @@ class PaymentOptionsAvailability
         return $this->country;
     }
 
-    public function setCountry(string $country)
+    public function setCountry(string $country) : PaymentOptionsAvailability
     {
         $this->country = $country;
         return $this;
@@ -47,12 +49,12 @@ class PaymentOptionsAvailability
     /**
      * @return \Tamara\Model\Money
      */
-    public function getOrderValue()
+    public function getOrderValue() : Money
     {
         return $this->orderValue;
     }
 
-    public function setOrderValue(\Tamara\Model\Money $orderValue)
+    public function setOrderValue(Money $orderValue) : PaymentOptionsAvailability
     {
         $this->orderValue = $orderValue;
         return $this;
@@ -63,7 +65,7 @@ class PaymentOptionsAvailability
         return $this->phoneNumber;
     }
 
-    public function setPhoneNumber(string $phoneNumber)
+    public function setPhoneNumber(string $phoneNumber) : PaymentOptionsAvailability
     {
         $this->phoneNumber = $phoneNumber;
         return $this;

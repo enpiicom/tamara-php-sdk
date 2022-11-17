@@ -10,7 +10,7 @@ class Merchant
 
     private $singleCheckoutEnabled;
 
-    public static function fromArray(array $data)
+    public static function fromArray(array $data) : Merchant
     {
         $self = new self();
         $self->setSingleCheckoutEnabled($data[self::SINGLE_CHECKOUT_ENABLED]);

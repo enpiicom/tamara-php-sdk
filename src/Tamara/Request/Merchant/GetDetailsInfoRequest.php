@@ -21,7 +21,7 @@ class GetDetailsInfoRequest
     /**
      * @return Merchant
      */
-    public function getMerchant()
+    public function getMerchant() : Merchant
     {
         return $this->merchant;
     }
